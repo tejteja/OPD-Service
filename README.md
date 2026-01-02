@@ -14,124 +14,7 @@ This service is built incrementally in **phases**, with **strict scope locking**
 
 ---
 
-## 1️⃣ Bounded Context Lock (MUST DO)
 
-* This service **owns OPD-related data only**
-* It manages:
-
-  * Doctors
-  * Technicians
-  * Patients (only OPD-specific data)
-  * Consultations
-  * Tests
-  * Prescriptions
-  * Notes
-
-### 🚫 Explicitly NOT Owned by This Service
-
-* Global patient master data
-* Actual payment logic
-
-### 🔗 Cross-Service References
-
-* Holds **reference IDs only** for:
-
-  * Consultations
-  * Tests
-  * Payments
-
-> The service stores **only patient data relevant to OPD visits**, not the global patient profile.
-
----
-
-## 2️⃣ API Contracts Finalization (MUST DO)
-
-* Communication style: **HTTP + REST**
-* APIs are designed **before implementation**
-* Endpoints are predefined and stable
-
-### API Design Rules
-
-* If request/response matches UML entities → use entities directly
-* If response is a combination of multiple entities → create **DTOs**
-* HTTP methods:
-
-  * `POST` → Create operations
-  * `GET` → Read operations (used even for fetch operations for enhanced security)
-
----
-
-## 3️⃣ Domain Model Freeze (CRITICAL)
-
-* All **ID fields are immutable**
-* Other immutable fields are clearly marked in the UML
-* Once frozen:
-
-  * No structural changes without strong justification
-  * Ensures stable contracts and data consistency
-
----
-
-## 4️⃣ Data Ownership & Tables (MUST DO)
-
-* **Phase 1 focus**:
-
-  * Design correctness
-  * Entity modeling
-  * API testing using dummy data
-* No immediate DB integration
-
-### Current Assumption
-
-* DTOs are treated as **logical tables**
-* Actual DB integration will be done **after domain + API maturity**
-
-> Database work will be introduced as a **separate learning phase**, not mixed with core design.
-
----
-
-## 5️⃣ Event Strategy (IMPORTANT)
-
-* Phase 1 uses **synchronous REST**
-* Kafka or async messaging is **intentionally deferred**
-* Event strategy will be designed **after**:
-
-  * UML
-  * APIs
-  * Services
-  * Tables
-
-> Event-driven architecture will be added **only when the design demands it**, not upfront.
-
----
-
-## 6️⃣ Non-Functional Decisions (Often Ignored)
-
-* Will be added gradually as learning progresses
-* Includes:
-
-  * Performance
-  * Security
-  * Scalability
-  * Observability
-
----
-
-## 7️⃣ Phase-1 Scope Lock (VERY IMPORTANT)
-
-### Phase-1 Capabilities
-
-* Add patients
-* Add consultations
-* Use existing:
-
-  * Doctors
-  * Tests
-  * Reference data
-
-> **No scope creep allowed** in Phase-1.
-
----
 
 ## 🌐 API Structure
 
@@ -194,6 +77,138 @@ Controllers are separated to maintain **Separation of Concerns**.
 * Communication: **HTTP / REST**
 
 ---
+---
+
+
+
+
+
+
+
+
+## **NOTES:**
+
+## Application Architecture Designing: 
+
+## 1️⃣ Bounded Context Lock (MUST DO)
+
+* This service **owns OPD-related data only**
+* It manages:
+
+  * Doctors
+  * Technicians
+  * Patients (only OPD-specific data)
+  * Consultations
+  * Tests
+  * Prescriptions
+  * Notes
+
+### 🚫 Explicitly NOT Owned by This Service
+
+* Global patient master data
+* Actual payment logic
+
+### 🔗 Cross-Service References
+
+* Holds **reference IDs only** for:
+
+  * Consultations
+  * Tests
+  * Payments
+
+> The service stores **only patient data relevant to OPD visits**, not the global patient profile.
+
+
+
+## 2️⃣ API Contracts Finalization (MUST DO)
+
+* Communication style: **HTTP + REST**
+* APIs are designed **before implementation**
+* Endpoints are predefined and stable
+
+### API Design Rules
+
+* If request/response matches UML entities → use entities directly
+* If response is a combination of multiple entities → create **DTOs**
+* HTTP methods:
+
+  * `POST` → Create operations
+  * `GET` → Read operations (used even for fetch operations for enhanced security)
+
+
+
+## 3️⃣ Domain Model Freeze (CRITICAL)
+
+* All **ID fields are immutable**
+* Other immutable fields are clearly marked in the UML
+* Once frozen:
+
+  * No structural changes without strong justification
+  * Ensures stable contracts and data consistency
+
+
+
+## 4️⃣ Data Ownership & Tables (MUST DO)
+
+* **Phase 1 focus**:
+
+  * Design correctness
+  * Entity modeling
+  * API testing using dummy data
+* No immediate DB integration
+
+### Current Assumption
+
+* DTOs are treated as **logical tables**
+* Actual DB integration will be done **after domain + API maturity**
+
+> Database work will be introduced as a **separate learning phase**, not mixed with core design.
+
+
+
+## 5️⃣ Event Strategy (IMPORTANT)
+
+* Phase 1 uses **synchronous REST**
+* Kafka or async messaging is **intentionally deferred**
+* Event strategy will be designed **after**:
+
+  * UML
+  * APIs
+  * Services
+  * Tables
+
+> Event-driven architecture will be added **only when the design demands it**, not upfront.
+
+
+
+## 6️⃣ Non-Functional Decisions (Often Ignored)
+
+* Will be added gradually as learning progresses
+* Includes:
+
+  * Performance
+  * Security
+  * Scalability
+  * Observability
+
+
+
+## 7️⃣ Phase-1 Scope Lock (VERY IMPORTANT)
+
+### Phase-1 Capabilities
+
+* Add patients
+* Add consultations
+* Use existing:
+
+  * Doctors
+  * Tests
+  * Reference data
+
+> **No scope creep allowed** in Phase-1.
+
+---
+
 
 ## 🧩Creating A Repo Day-0: Standard Professional Workflow (Git + GitHub)
 
@@ -259,22 +274,11 @@ Controllers are separated to maintain **Separation of Concerns**.
 * Profiles
 * Properties
 
----
-
-## 📚 Topics to Learn Alongside
-
+## Deployment, Communication:
 * SSH basics
 * Host concepts and environment setup
 
----
 
-## 🎯 Project Goal
 
-This project is **not just an application**, but a **learning platform** to:
-
-* Practice real-world microservice design
-* Apply clean architecture principles
-* Build confidence in system design interviews
-* Grow step-by-step without shortcuts
 
 
