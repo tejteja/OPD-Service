@@ -134,6 +134,7 @@ Controllers are separated to maintain **Separation of Concerns**.
 ### 1️⃣ Bounded Context Lock (MUST DO)
 
 * This service **owns OPD-related data only**
+* Model Classes(Builder), Req/Resp DTOs are as well decided
 * It manages:
 
   * Doctors
@@ -159,6 +160,18 @@ Controllers are separated to maintain **Separation of Concerns**.
 
 > The service stores **only patient data relevant to OPD visits**, not the global patient profile.
 </br>
+
+### Mode- DTO Design:
+Consultation          → Domain model (Builder)
+CreateConsultationReq → API input
+ConsultationEntity    → JPA (if used , optional)
+ConsultationResponse  → API output
+
+Controller  →  Service  →  DAO
+                ↑
+        DTO → Model(builder) mapping
+
+
 
 
 ### 2️⃣ API Contracts Finalization (MUST DO)
