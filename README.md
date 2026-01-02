@@ -238,7 +238,8 @@ Controllers are separated to maintain **Separation of Concerns**.
 
 <br></br>
 ---
-<br></br>
+
+</br>
 
 ## ✅ Technology Checklist
 
@@ -273,7 +274,7 @@ Controllers are separated to maintain **Separation of Concerns**.
 * Profiles
 * Properties
 
-## Deployment, Communication:
+### Deployment, Communication:
 * SSH basics
 * Host concepts and environment setup
 
