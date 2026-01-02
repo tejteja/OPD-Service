@@ -85,6 +85,48 @@ Controllers are separated to maintain **Separation of Concerns**.
 
 ## **NOTES:**
 <br></br>
+## ✅ Technology Checklist
+
+### Core
+
+* Java
+* Spring Boot
+* REST
+* Controller Advice & Exception Handling
+* Logging
+* Git & GitHub
+* sessions, cookies
+
+### Backend & Infrastructure
+
+* JDBC
+* Database Integration
+* Connection Pooling
+* Spring Cloud
+* Docker
+* Kubernetes
+* Kafka
+* * flyway scripts
+
+### Testing
+
+* Unit Testing
+* Integration Testing
+
+### Web & Runtime
+
+* Cookies
+* Sessions
+* Profiles
+* Properties
+
+### Deployment, Communication:
+* SSH basics
+* Host concepts and environment setup
+
+</br>
+---
+</br>
 
 ## Application Architecture Designing: 
 
@@ -242,42 +284,6 @@ Controllers are separated to maintain **Separation of Concerns**.
 
 </br>
 
-## ✅ Technology Checklist
-
-### Core
-
-* Java
-* Spring Boot
-* REST
-* Controller Advice & Exception Handling
-* Logging
-* Git & GitHub
-
-### Backend & Infrastructure
-
-* JDBC
-* Database Integration
-* Connection Pooling
-* Spring Cloud
-* Docker
-* Kubernetes
-* Kafka
-
-### Testing
-
-* Unit Testing
-* Integration Testing
-
-### Web & Runtime
-
-* Cookies
-* Sessions
-* Profiles
-* Properties
-
-### Deployment, Communication:
-* SSH basics
-* Host concepts and environment setup
 
 
 
