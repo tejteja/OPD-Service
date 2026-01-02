@@ -106,7 +106,8 @@ Controllers are separated to maintain **Separation of Concerns**.
 * Docker
 * Kubernetes
 * Kafka
-* * flyway scripts
+* flyway scripts
+* validation, message.properties, errorcodes.
 
 ### Testing
 
