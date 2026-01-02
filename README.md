@@ -115,7 +115,7 @@ Controllers are separated to maintain **Separation of Concerns**.
   * Payments
 
 > The service stores **only patient data relevant to OPD visits**, not the global patient profile.
-
+</br>
 
 
 ### 2️⃣ API Contracts Finalization (MUST DO)
@@ -132,7 +132,7 @@ Controllers are separated to maintain **Separation of Concerns**.
 
   * `POST` → Create operations
   * `GET` → Read operations (used even for fetch operations for enhanced security)
-
+</br>
 
 
 ### 3️⃣ Domain Model Freeze (CRITICAL)
@@ -143,7 +143,7 @@ Controllers are separated to maintain **Separation of Concerns**.
 
   * No structural changes without strong justification
   * Ensures stable contracts and data consistency
-
+</br>
 
 
 ### 4️⃣ Data Ownership & Tables (MUST DO)
@@ -161,7 +161,7 @@ Controllers are separated to maintain **Separation of Concerns**.
 * Actual DB integration will be done **after domain + API maturity**
 
 > Database work will be introduced as a **separate learning phase**, not mixed with core design.
-
+</br>
 
 
 ### 5️⃣ Event Strategy (IMPORTANT)
@@ -176,7 +176,7 @@ Controllers are separated to maintain **Separation of Concerns**.
   * Tables
 
 > Event-driven architecture will be added **only when the design demands it**, not upfront.
-
+</br>
 
 
 ### 6️⃣ Non-Functional Decisions (Often Ignored)
@@ -188,7 +188,7 @@ Controllers are separated to maintain **Separation of Concerns**.
   * Security
   * Scalability
   * Observability
-
+</br>
 
 
 ### 7️⃣ Phase-1 Scope Lock (VERY IMPORTANT)
