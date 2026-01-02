@@ -76,12 +76,12 @@ Controllers are separated to maintain **Separation of Concerns**.
 * Architecture: **Microservice**
 * Communication: **HTTP / REST**
 
-<br>
-<br>
+<br></br>
+<br></br>
 ---
 ---
-<br>
-<br>
+<br></br>
+<br></br>
 
 ## **NOTES:**
 
