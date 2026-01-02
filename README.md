@@ -203,9 +203,9 @@ Controllers are separated to maintain **Separation of Concerns**.
   * Reference data
 
 > **No scope creep allowed** in Phase-1.
-
+<br></br>
 ---
-
+<br></br>
 
 ## 🧩Creating A Repo Day-0: Standard Professional Workflow (Git + GitHub)
 
@@ -236,7 +236,9 @@ Controllers are separated to maintain **Separation of Concerns**.
 6. Push local repository as the source of truth
 7. Continue development using commits and branches
 
+<br></br>
 ---
+<br></br>
 
 ## ✅ Technology Checklist
 
