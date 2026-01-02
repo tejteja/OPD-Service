@@ -84,10 +84,11 @@ Controllers are separated to maintain **Separation of Concerns**.
 <br></br>
 
 ## **NOTES:**
+<br></br>
 
 ## Application Architecture Designing: 
 
-## 1️⃣ Bounded Context Lock (MUST DO)
+### 1️⃣ Bounded Context Lock (MUST DO)
 
 * This service **owns OPD-related data only**
 * It manages:
@@ -117,7 +118,7 @@ Controllers are separated to maintain **Separation of Concerns**.
 
 
 
-## 2️⃣ API Contracts Finalization (MUST DO)
+### 2️⃣ API Contracts Finalization (MUST DO)
 
 * Communication style: **HTTP + REST**
 * APIs are designed **before implementation**
@@ -134,7 +135,7 @@ Controllers are separated to maintain **Separation of Concerns**.
 
 
 
-## 3️⃣ Domain Model Freeze (CRITICAL)
+### 3️⃣ Domain Model Freeze (CRITICAL)
 
 * All **ID fields are immutable**
 * Other immutable fields are clearly marked in the UML
@@ -145,7 +146,7 @@ Controllers are separated to maintain **Separation of Concerns**.
 
 
 
-## 4️⃣ Data Ownership & Tables (MUST DO)
+### 4️⃣ Data Ownership & Tables (MUST DO)
 
 * **Phase 1 focus**:
 
@@ -163,7 +164,7 @@ Controllers are separated to maintain **Separation of Concerns**.
 
 
 
-## 5️⃣ Event Strategy (IMPORTANT)
+### 5️⃣ Event Strategy (IMPORTANT)
 
 * Phase 1 uses **synchronous REST**
 * Kafka or async messaging is **intentionally deferred**
@@ -178,7 +179,7 @@ Controllers are separated to maintain **Separation of Concerns**.
 
 
 
-## 6️⃣ Non-Functional Decisions (Often Ignored)
+### 6️⃣ Non-Functional Decisions (Often Ignored)
 
 * Will be added gradually as learning progresses
 * Includes:
@@ -190,7 +191,7 @@ Controllers are separated to maintain **Separation of Concerns**.
 
 
 
-## 7️⃣ Phase-1 Scope Lock (VERY IMPORTANT)
+### 7️⃣ Phase-1 Scope Lock (VERY IMPORTANT)
 
 ### Phase-1 Capabilities
 
