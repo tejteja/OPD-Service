@@ -195,7 +195,7 @@ Controllers are separated to maintain **Separation of Concerns**.
 
 ---
 
-## 🧩 Standard Professional Workflow (Git + GitHub)
+## 🧩Creating A Repo Day-0: Standard Professional Workflow (Git + GitHub)
 
 ### Clean Repository Flow
 
