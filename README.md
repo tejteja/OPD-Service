@@ -96,6 +96,7 @@ Controllers are separated to maintain **Separation of Concerns**.
 * Logging
 * Git & GitHub
 * sessions, cookies
+* request context, headers, encoding
 
 ### Backend & Infrastructure
 
