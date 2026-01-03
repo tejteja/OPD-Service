@@ -34,7 +34,8 @@ Controllers are separated to maintain **Separation of Concerns**.
 
 * `/create` → Create consultation
 * `/get` → Fetch consultation
-* `/update` → Update consultation
+* `/update` → Update consultation. must be able to alter data like payId, samples, child consultations etc (meta data pf consultation by the staff and must only have access to them)
+* '/process' -> patient doc interaction(docs only must be able to add meds notes add tests)
 
 #### `/patient`
 
