@@ -1,4 +1,4 @@
-package com.healthify.opdservice.dataLayer;
+package com.healthify.opdservice.data;
 
 import com.healthify.opdservice.entities.Doctor;
 import com.healthify.opdservice.enums.Constants;
@@ -9,7 +9,6 @@ import java.time.LocalDate;
 import java.time.Month;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 @Component
 public class DoctorData {

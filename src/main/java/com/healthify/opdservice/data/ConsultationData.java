@@ -1,4 +1,4 @@
-package com.healthify.opdservice.dataLayer;
+package com.healthify.opdservice.data;
 
 import com.healthify.opdservice.entities.Consultation;
 import org.springframework.stereotype.Component;

@@ -1,14 +1,13 @@
 package com.healthify.opdservice.func;
 
 import com.healthify.opdservice.DTO.request.CreateConsultationRequest;
-import com.healthify.opdservice.dataLayer.ConsultationData;
-import com.healthify.opdservice.dataLayer.DoctorData;
-import com.healthify.opdservice.dataLayer.PatientData;
+import com.healthify.opdservice.data.ConsultationData;
+import com.healthify.opdservice.data.DoctorData;
+import com.healthify.opdservice.data.PatientData;
 import com.healthify.opdservice.entities.Consultation;
 import com.healthify.opdservice.util.UuidUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.slf4j.LoggerFactoryFriend;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

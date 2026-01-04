@@ -1,4 +1,4 @@
-package com.healthify.opdservice.controllers;
+package com.healthify.opdservice.controller;
 
 import com.healthify.opdservice.DTO.request.CreateConsultationRequest;
 import com.healthify.opdservice.func.CreateConsultationFunc;

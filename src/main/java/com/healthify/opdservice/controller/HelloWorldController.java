@@ -1,4 +1,4 @@
-package com.healthify.opdservice.controllers;
+package com.healthify.opdservice.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

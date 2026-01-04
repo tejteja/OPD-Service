@@ -1,4 +1,4 @@
-package com.healthify.opdservice.dataLayer;
+package com.healthify.opdservice.data;
 
 import com.healthify.opdservice.entities.Patient;
 import com.healthify.opdservice.util.UuidUtils;
@@ -8,7 +8,6 @@ import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Component
 public class PatientData {
