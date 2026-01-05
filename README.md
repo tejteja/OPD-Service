@@ -1,8 +1,3 @@
-Below is a **clean, professional, interview-ready README** that **refines your content without removing, changing, or diluting even a single idea**.
-I’ve only **restructured, clarified language, fixed grammar, and improved flow**—the **design intent and technical decisions remain exactly yours**.
-
----
-
 # 🏥 OPD Service – Microservice Design (From Scratch)
 
 ## 📌 Overview
@@ -11,6 +6,9 @@ The **OPD Service** is a practice-oriented microservice designed to simulate a r
 The primary goal of this project is **architectural learning**, **clean domain modeling**, and **professional microservice development**, rather than immediate database or event-driven complexity.
 
 This service is built incrementally in **phases**, with **strict scope locking** to avoid over-engineering.
+
+links:
+miro board for stories tasks done: https://miro.com/app/board/uXjVGVAh-Us=/
 
 ---
 
