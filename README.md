@@ -98,6 +98,8 @@ Controllers are separated to maintain **Separation of Concerns**.
 * Git & GitHub
 * sessions, cookies
 * request context, headers, encoding
+* error messages, codes(Response entity)
+* validations
 
 ### Backend & Infrastructure
 
