@@ -5,6 +5,7 @@ import com.healthify.opdservice.data.ConsultationData;
 import com.healthify.opdservice.data.DoctorData;
 import com.healthify.opdservice.data.PatientData;
 import com.healthify.opdservice.entities.Consultation;
+import com.healthify.opdservice.api.exceptions.OPDServiceException;
 import com.healthify.opdservice.util.UuidUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,6 +13,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
+
+import static com.healthify.opdservice.enums.OPDServiceExceptionErrorCodes.*;
 
 @Component
 public class CreateConsultationFunc {
@@ -26,17 +29,33 @@ public class CreateConsultationFunc {
 
     public String createConsultation(CreateConsultationRequest consultation){
         logger.info("in CreateConsultationFunc.class");
+
         //create uuid
         String uuid = UuidUtils.getnewUuid();
-        logger.info("created uuid: {}",uuid);
+        if(uuid == null){
+            logger.error("error generating uuid for consultation");
+            throw new OPDServiceException(UUID_NOT_GENERATED);
+        }else {
+            logger.info("created uuid: {}", uuid);
+        }
 
         //get doc uuid from db
         String docUuid = doctorData.getDoctorDataByName(consultation.getDoctorName());
-        logger.info("git docs info {}",docUuid);
+        if(docUuid == null){
+            logger.error("error fetching doctor info for name {}", consultation.getDoctorName());
+            throw new OPDServiceException(DOCTOR_NOT_FOUND,consultation.getDoctorName());
+        }else {
+            logger.info("git docs info {}", docUuid);
+        }
 
         //get patientID from db
         String patientUuid = patientData.getPatientDataByName(consultation.getPatientName());
-        logger.info("got patient info {}",patientUuid);
+        if(patientUuid == null){
+            logger.error("error fetching patient info for name {}", consultation.getPatientName());
+            throw new OPDServiceException(PATIENT_NOT_FOUND,consultation.getPatientName());
+        }else {
+            logger.info("got patient info {}", patientUuid);
+        }
 
         // create Consultation obj
         Consultation consultationBuilder = new Consultation.Builder().setFirstConsultation(true)
@@ -55,9 +74,16 @@ public class CreateConsultationFunc {
                 .setParentConsultationId(null)
                 .build();
         logger.info("created consultation for uuid: {}",consultationBuilder.getUuid());
-        //call db to add
+
+
+        //call db to add consultation
             String consultationUuid = consultationData.addConsultation(consultationBuilder);
-        logger.info("added consultation to db consultationUuid: {}",consultationUuid);
+            if(consultationUuid == null){
+                logger.error("error adding consultation to db for uuid: {}",consultationBuilder.getUuid());
+                throw new OPDServiceException(CONSULTATION_CREATION_FAILED);
+            }else {
+                logger.info("added consultation to db consultationUuid: {}", consultationUuid);
+            }
 
         return consultationUuid;
     }

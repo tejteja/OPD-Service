@@ -40,7 +40,7 @@ public class DoctorData {
 
     public String getDoctorDataByName(String name){
         //todo: impl this later,for now return 1 record from hard coded list
-        return doctorData.stream().filter(d -> d.getName().equals(name)).map(d -> d.getUuid()).findFirst().orElse(defaultDoc);
+        return doctorData.stream().filter(d -> d.getName().equals(name)).map(d -> d.getUuid()).findFirst().orElse(null);
 
     }
 

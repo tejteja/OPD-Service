@@ -59,7 +59,7 @@ public class PatientData {
     public String getPatientDataByName(String name){
         //todo: impl this later, for now use hard coded data
         logger.info("searching for: {}",name);
-        return patientData.stream().filter(p -> p.getName().equals(name)).peek(p->p.getName()).map(p->p.getId()).findFirst().orElse("no such patient");
+        return patientData.stream().filter(p -> p.getName().equals(name)).peek(p->p.getName()).map(p->p.getId()).findFirst().orElse(null);
     }
 
 
